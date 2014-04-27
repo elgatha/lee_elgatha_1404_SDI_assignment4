@@ -1,3 +1,4 @@
+// JavaScript Document
 //Elgatha Lee
 //Assignment 4
 //SDI 1404
@@ -28,13 +29,13 @@ var checkPhoneNumber = function (number)   {
 	
 		if (dash1 == "-" && dash2 == "-") {
 			if (phoneNumber.length == 12) {
-				return (phoneNumber + " is a valid phone number"); 
+				return true;
 			} else {
-				return (phoneNumber + " is not a valid phone number"); 
+				return false;
 			}
 		}
 		else {
-			return (phoneNumber + " is not a valid phone number"); 
+			return false;
 		}
 		
 };
@@ -49,9 +50,9 @@ var checkEmail = function (localEmail) {
 	var dot = email.lastIndexOf(".");
 
 	if (at == -1 || dot == -1 || (at + 2) >= dot) {
-		return false (email + " is not a valid email address"); 
+		return false; 
 	}else {
-		return (email + " is a valid email address");
+		return true;
 	}
 };
 var myEmail = checkEmail("appleelgatha@fullsail.edu");
@@ -59,30 +60,20 @@ console.log(myEmail);
 
 //3
 
-var urlHttp = function (string) {
-	var url = string,
-		check = "",
-		checkArray = [],
-		end = url.indexOf(":");
+var urlHttp = function(input){
+	var url = input;
+	var checkUrl = "";
+	var webArray = [];
+	var end = url.substring(0, end +1);
 
-	checkArray[0] = "http:";
-	checkArray[1] = "https:";
-
-	check = url.substring(0, end + 1);
-
-	if (check === checkArray[0]) {
-		return (url + " is a valid URL.");
-	}
-	else if (check === checkArray[1]) {
-		return (url + " is a valid URL.");
-	}
-	else {
-		return (url + " is not a valid URL.");
+if (checkUrl === webArray[0]){
+	return true;
+} else if (checkUrl ===webArray[1]){
+	return true;
+}	else {
+	return false;
 	}
 };
-var theUrl = urlHttp("http://www.goodfoodislife.com");
-console.log(theUrl);
-
 
 //4
 
@@ -96,8 +87,7 @@ result = result.concat(spNew + " ");
 return result;
 };
 
-var capital = splitStrUpper("apple elgatha");
-console.log(capital);
+splitStrUpper("apple elgatha");
 
 //5
 
@@ -124,15 +114,11 @@ console.log(capital);
 
 //1
 
-var specificNumberDecimal = function (number) {
-	var newNumber;
+parseFloat(Math.round(2.1 * 100) / 100).toFixed(2);
 
-	newNumber = number.toFixed(2);
+var num1 = "2.1";
+document.getElementById('num1').innerHTML = parseFloat(Math.round(num1 * 100) / 100).toFixed(2);
 
-	return (number + " has been rounded to " + newNumber);	
-}
-var decimal = specificNumberDecimal("200");
-console.log(decimal);
 
 //2
 
@@ -206,10 +192,4 @@ alert(arr.minGreaterThan(n));
 
 
 //3
-
-
-
-
-
-
 
