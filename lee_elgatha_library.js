@@ -1,1 +1,0 @@
-//elgatha_library.js

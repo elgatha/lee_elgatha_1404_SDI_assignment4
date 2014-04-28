@@ -3,7 +3,6 @@
 //SDI 1404
 
 
-
 /* -------------------------------------------------------------------------------------------------------- */
 /* -------------------------------------------------------------------------------------------------------- */
 
@@ -20,7 +19,8 @@
 /* -------------------------------------------------------------------------------------------------------- */
 
 //1
-
+	// Checks for a valid phone number
+	// Returns boolean
 var checkPhoneNumber = function (number)   {
 	var phoneNumber = number;
 	var dash1 = (phoneNumber.substring(3, 4));
@@ -42,7 +42,8 @@ var myPhone = checkPhoneNumber("305-713-2938");
 console.log(myPhone);
 
 //2
-
+	// Checks for a valid email address
+	// Returns boolean
 var checkEmail = function (localEmail) {
 	var email = localEmail;
 	var at = email.indexOf("@");
@@ -58,7 +59,8 @@ var myEmail = checkEmail("appleelgatha@fullsail.edu");
 console.log(myEmail);
 
 //3
-
+	// Checks for a valid URL
+	// Returns boolean
 var urlHttp = function (string) {
 	var url = string,
 		check = "",
@@ -85,6 +87,8 @@ console.log(theUrl);
 
 
 //4
+	// Capitalize the first character of each word in a string
+	// Returns modified string with the first letter capitalized in each word
 
 var splitStrUpper = function (str) {
 var split = str.split(" ");
@@ -100,16 +104,14 @@ var capital = splitStrUpper("apple elgatha");
 console.log(capital);
 
 //5
+	// Changes and  separates function
 
-function separator(newFormat) {
-    if (newFormat) {
-        return console.log("a/" + "b/" + "c/");
-    }
-};
-
-
-
-
+function changeSep(newSep) {
+	var val = newSep
+	var str = "a,b,c"
+	newVal = str.replace(/a,/,"a/",/b,/,"b/",/c,/,"c/")
+	return newVal
+}
 
 /* -------------------------------------------------------------------------------------------------------- */
 /* -------------------------------------------------------------------------------------------------------- */
@@ -127,6 +129,8 @@ function separator(newFormat) {
 /* -------------------------------------------------------------------------------------------------------- */
 
 //1
+	// Change a number to use a specific amount of decimal places
+	
 var decimal = function (number) {
 	var newNumber;
 
@@ -137,7 +141,8 @@ var decimal = function (number) {
 console.log(decimal(2.1));
 
 //2
-
+	// Checks to see is the number above or below a number is within a certain percent
+	
 Number.prototype.isFuzzy= function(compare, percent){
     var dev= compare*(percent/100), n= +this;
     return n>= compare-dev && n<= compare+dev;
@@ -148,7 +153,8 @@ console.log(n.isFuzzy(10, 10));
 
 
 //3
-
+	// Input two dates using new Date(yyyy,mm,dd)
+	// Output format [Days,Hours,Minutes,Seconds] conversion for each at specific index shown
 var first = '1/1/2000';
 var second = '1/1/2001';
 
@@ -168,6 +174,7 @@ console.log(diff);
 
 //4
 
+	// Changes a string "x" to an integer value x
 var x = "42";
 var integerForX = parseInt(x);
 console.log('Number of the string: ' + x + ' is : ' +  integerForX);
@@ -187,7 +194,8 @@ console.log('Number of the string: ' + x + ' is : ' +  integerForX);
 /* -------------------------------------------------------------------------------------------------------- */
 
 //1
-
+	// Smallest value in array greater than a given number
+	
 Array.prototype.minGreaterThan=function(a){
     var t=this,r=Number.POSITIVE_INFINITY,i;
 	
@@ -202,7 +210,7 @@ console.log(arr.minGreaterThan(n));
 
 
 //2
-
+	// Add up and total only numbers in an array
 function myFunction(a,b,c,d,e) {
 	return a+b+c+d+e;
 }
@@ -211,7 +219,7 @@ console.log('The sum of these parts is: ' + x);
 
 
 //3
-
+	// Sorts objects in array
 function custom_sort()
     {
         var example_array = [{a:2},{a:3},{a:1},{a:5},{a:4}];
@@ -235,4 +243,6 @@ function custom_sort()
     }
 
 var array = [{a: 2}, {a: 3}, {a: 1}, {a: 5}, {a: 4}];
-custom_sort(array);
+custom_sort(array) 
+
+
