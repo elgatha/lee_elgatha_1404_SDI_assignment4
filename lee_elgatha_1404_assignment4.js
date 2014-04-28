@@ -106,6 +106,7 @@ function separator(newFormat) {
         return console.log("a/" + "b/" + "c/");
     }
 }
+};
 
 
 
@@ -208,6 +209,7 @@ function myFunction(a,b,c,d,e) {
 }
 var x = myFunction(10,20,30,40,50);
 console.log('Number of the string: ' + x); 
+console.log('The sum of these parts is: ' + x); 
 
 
 //3
