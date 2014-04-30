@@ -12,7 +12,8 @@
 2. Does a string follow an aaa@bbb.ccc pattern like an email address?
 3. Is the string a URL? (Does it start with http: or https:?)
 4. Title-case a string (split into words, then uppercase the first letter of each word)
-5. Given a string that is a list of things separated by a given string, as well as another string separator, return a string with the first separator changed to the second: "a,b,c" + "," + "/" → "a/b/c".
+5. Given a string that is a list of things separated by a given string, as well as another string separator, 
+   return a string with the first separator changed to the second: "a,b,c" + "," + "/" → "a/b/c".
 */
 
 /* -------------------------------------------------------------------------------------------------------- */
@@ -38,8 +39,9 @@ var checkPhoneNumber = function (number)   {
 		}
 		
 };
+
 var myPhone = checkPhoneNumber("305-713-2938");
-console.log(myPhone);
+	console.log(myPhone);
 
 //2
 	// Checks for a valid email address
@@ -106,11 +108,11 @@ console.log(capital);
 //5
 	// Changes and  separates function
 
-function changeSep(newSep) {
-	var val = newSep
+function changeSep(valueChange) {
+	var value = newSep
 	var str = "a,b,c"
-	newVal = str.replace(/a,/,"a/",/b,/,"b/",/c,/,"c/")
-	return newVal
+	valueChange = str.replace(/a,/,"a/",/b,/,"b/",/c,/,"c/")
+	return valueChange
 }
 
 /* -------------------------------------------------------------------------------------------------------- */
