@@ -3,8 +3,6 @@
 //SDI 1404
 
 
-
-
 /* -------------------------------------------------------------------------------------------------------- */
 /* -------------------------------------------------------------------------------------------------------- */
 
@@ -107,46 +105,38 @@ return result;
 var capital = splitStrUpper("apple elgatha");
 console.log(capital);
 
+
 //5
 	// Changes and  separates function
 
 
-function splitString(stringToSplit, separator) {
-  var arrayOfStrings = stringToSplit.split(separator);
+var alpha = "a,b,c"
+console.log(alpha);
 
-  console.log('The original string is: "' + stringToSplit + '"');
-  console.log('The separator is: "' + separator + '"');
-  console.log("The array has " + arrayOfStrings.length + " elements: ");
+var replaceCommas = function (i) {
+var myString = i;
+    alpha = i.replace(",", "/");
+    alpha = alpha.replace(",", "/");
 
+console.log(alpha);
+};
+var removeCommas = replaceCommas("a,b,c");
 
-  for (var i=0; i < arrayOfStrings.length; i++)
-    console.log(arrayOfStrings[i] + " / ");
-}
-
-var alpha1String = "a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z";
-var alpha2String = "abcdefghijklmnopqrstuvwxyz";
-
-var space = " ";
-var comma = ",";
-
-splitString(alpha1String, space);
-splitString(alpha1String);
-splitString(alpha2String, comma);
-
-
-function changeSep(valueChange) {
-	var value = newSep
-	var str = "a,b,c"
-	valueChange = str.replace(/a,/,"a/",/b,/,"b/",/c,/,"c/")
-	return valueChange
-}
 
 /* -------------------------------------------------------------------------------------------------------- */
 /* -------------------------------------------------------------------------------------------------------- */
 
 /* NUMBER
 
-1. Format a number to use a specific number of decimal places, as for money: 2.1 → 2.10
+1. Format a number to usevar removeCommas = function (i) {
+var myString = i;
+    carr = i.replace(",", "/");
+    darr = carr.replace(",", "/");
+
+console.log(darr);
+};
+var rCommas = removeCommas("a,b,z");
+ a specific number of decimal places, as for money: 2.1 → 2.10
 2. Fuzzy-match a number: is the number above or below a number within a certain percent?
 3. Find the number of hours or days difference between two dates.
 4. Given a string version of a number such as "42", return the value as an actual Number, such as 42.
@@ -155,6 +145,7 @@ function changeSep(valueChange) {
 
 /* -------------------------------------------------------------------------------------------------------- */
 /* -------------------------------------------------------------------------------------------------------- */
+
 
 //1
 	// Change a number to use a specific amount of decimal places
