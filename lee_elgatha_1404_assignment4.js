@@ -3,6 +3,8 @@
 //SDI 1404
 
 
+
+
 /* -------------------------------------------------------------------------------------------------------- */
 /* -------------------------------------------------------------------------------------------------------- */
 
@@ -21,7 +23,7 @@
 
 //1
 	// Checks for a valid phone number
-	// Returns boolean
+	// Returns boolean for extra credit
 var checkPhoneNumber = function (number)   {
 	var phoneNumber = number;
 	var dash1 = (phoneNumber.substring(3, 4));
@@ -45,7 +47,7 @@ var myPhone = checkPhoneNumber("305-713-2938");
 
 //2
 	// Checks for a valid email address
-	// Returns boolean
+	// Returns boolean for extra credit
 var checkEmail = function (localEmail) {
 	var email = localEmail;
 	var at = email.indexOf("@");
@@ -62,7 +64,7 @@ console.log(myEmail);
 
 //3
 	// Checks for a valid URL
-	// Returns boolean
+	// Returns boolean for extra credit
 var urlHttp = function (string) {
 	var url = string,
 		check = "",
@@ -107,6 +109,30 @@ console.log(capital);
 
 //5
 	// Changes and  separates function
+
+
+function splitString(stringToSplit, separator) {
+  var arrayOfStrings = stringToSplit.split(separator);
+
+  console.log('The original string is: "' + stringToSplit + '"');
+  console.log('The separator is: "' + separator + '"');
+  console.log("The array has " + arrayOfStrings.length + " elements: ");
+
+
+  for (var i=0; i < arrayOfStrings.length; i++)
+    console.log(arrayOfStrings[i] + " / ");
+}
+
+var alpha1String = "a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z";
+var alpha2String = "abcdefghijklmnopqrstuvwxyz";
+
+var space = " ";
+var comma = ",";
+
+splitString(alpha1String, space);
+splitString(alpha1String);
+splitString(alpha2String, comma);
+
 
 function changeSep(valueChange) {
 	var value = newSep
@@ -246,5 +272,3 @@ function custom_sort()
 
 var array = [{a: 2}, {a: 3}, {a: 1}, {a: 5}, {a: 4}];
 custom_sort(array) 
-
-
